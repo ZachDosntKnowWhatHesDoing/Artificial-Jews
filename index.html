@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // 🌐 Set your project/site name here
+    const siteName = "Your Project Name"; // change this to whatever you want
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = siteName;
+      document.querySelectorAll("[data-site-name]").forEach(el => {
+        el.textContent = siteName;
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    });
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <h1 data-site-name></h1>
+    <p class="tagline">Innovating the future of technology</p>
+    <a href="#about" class="scroll-down">Learn More</a>
+  </header>
+
+  <section id="about" class="section">
+    <div class="content">
+      <h2>About <span data-site-name></span></h2>
+      <p><span data-site-name></span> is a next-generation platform simulating artificial intelligence experiences for demonstration and research purposes.</p>
+    </div>
+  </section>
+
+  <section id="features" class="section alt">
+    <div class="content">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Interactive AI simulation</li>
+        <li>Adaptive responses</li>
+        <li>Dynamic animations and visuals</li>
+        <li>Modern, responsive design</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> <span data-site-name></span>. All rights reserved.</p>
+  </footer>
+</body>
+</html>
