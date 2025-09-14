@@ -1,0 +1,114 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #1c1f2b 0%, #3b4f9f 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeInDown 1.5s ease-out forwards;
+}
+
+.hero .tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  animation: bounce 2s infinite;
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3b4f9f 0%, #1c1f2b 100%);
+  background-attachment: fixed;
+}
+
+.section.alt {
+  background: linear-gradient(135deg, #4b2f5d 0%, #9f3b7b 100%);
+}
+
+.content {
+  max-width: 700px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p, .content ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.content ul {
+  list-style: none;
+}
+
+.content ul li::before {
+  content: "• ";
+  color: #00e0ff;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {opacity: 0; transform: translateY(-30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
