@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <script>
     // 🌐 Set your project/site name here
-    const siteName = "Artifical Jews"; // change this to whatever you want
+    const siteName = "Jew Intelegence"; // change this
 
     document.addEventListener("DOMContentLoaded", () => {
       document.title = siteName;
@@ -15,36 +15,59 @@
         el.textContent = siteName;
       });
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Intersection Observer for fade-in on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {threshold: 0.1});
+
+      document.querySelectorAll('.fade-section').forEach(section => {
+        observer.observe(section);
+      });
     });
   </script>
 </head>
 <body>
-  <header class="hero">
+  <header class="hero fade-section">
     <h1 data-site-name></h1>
-    <p class="tagline">Innovating the future of technology</p>
+    <p class="tagline">Innovating with Organic Intelligence</p>
     <a href="#about" class="scroll-down">Learn More</a>
   </header>
 
-  <section id="about" class="section">
+  <section id="about" class="section fade-section">
     <div class="content">
       <h2>About <span data-site-name></span></h2>
-      <p><span data-site-name></span> is a next-generation platform simulating artificial intelligence experiences for demonstration and research purposes.</p>
+      <p><span data-site-name></span> is a next-generation platform simulating intelligent systems using organic principles rather than purely artificial algorithms.</p>
+      <img src="your-image.jpg" alt="Organic Intelligence" class="blend-image">
     </div>
   </section>
 
-  <section id="features" class="section alt">
+  <section id="impact" class="section alt fade-section">
     <div class="content">
-      <h2>Key Features</h2>
-      <ul>
-        <li>Interactive AI simulation</li>
-        <li>Adaptive responses</li>
-        <li>Dynamic animations and visuals</li>
-        <li>Modern, responsive design</li>
-      </ul>
+      <h2>Our Impact</h2>
+      <p>By deploying <span data-site-name></span>, cities have seen measurable improvements in water-waste management, energy efficiency, and environmental stewardship.</p>
     </div>
   </section>
 
-  <footer class="footer">
+  <section id="quotes" class="section fade-section">
+    <div class="content">
+      <h2>What People Say</h2>
+      <blockquote>
+        “<span data-site-name></span> transformed how we handle resources. We reduced water waste by 35% in six months.”
+        <cite>— Dr. A. Rivera, Sustainability Officer</cite>
+      </blockquote>
+      <blockquote>
+        “Finally, a system that feels human yet improves efficiency beyond any artificial tool we tried.”
+        <cite>— Jamie Li, Chief Operations</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <footer class="footer fade-section">
     <p>&copy; <span id="year"></span> <span data-site-name></span>. All rights reserved.</p>
   </footer>
 </body>
